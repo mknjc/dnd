@@ -1,0 +1,14 @@
+
+.root {
+    -fx-font-size: 2em;
+}
+
+.column-header-background {
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+}
+
+.table-row-cell:currentlySelected {
+    -fx-background-color: #bbbbff;
+}
