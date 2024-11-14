@@ -238,7 +238,9 @@ class FightController : Initializable {
 
     @FXML
     fun addActionPressed(event: ActionEvent) {
-        addAction()
+        AddActionDialog(fightersTable.items.map { fighter -> fighter.name }).showAndWait().ifPresent { actions ->
+            actionsTable.items.addAll(actions)
+        }
     }
 
     private fun addFighter() {
@@ -246,36 +248,5 @@ class FightController : Initializable {
         fightersTable.focusModel.focus(fightersTable.items.size - 1, fightersTable.nameColumn)
         fightersTable.requestFocus()
         fightersTable.edit(fightersTable.items.size - 1, fightersTable.nameColumn)
-    }
-
-    private fun addAction() {
-        actionsTable.items.add(Action())
-        actionsTable.focusModel.focus(actionsTable.items.size - 1, actionsSourceColumn)
-        actionsTable.requestFocus()
-        actionsTable.edit(actionsTable.items.size - 1, actionsSourceColumn)
-
-        actionsSourceColumn.onEditStart = EventHandler { event ->
-            Platform.runLater {
-                val textField = actionsTable.lookup(".text-field") as? TextField
-
-                if (textField != null) {
-                    TextFields.bindAutoCompletion<String>(
-                        textField,
-                        fightersTable.items.map { fighter -> fighter.name })
-                }
-            }
-        }
-
-        actionsTargetColumn.onEditStart = EventHandler { event ->
-            Platform.runLater {
-                val textField = actionsTable.lookup(".text-field") as? TextField
-
-                if (textField != null) {
-                    TextFields.bindAutoCompletion<String>(
-                        textField,
-                        fightersTable.items.map { fighter -> fighter.name })
-                }
-            }
-        }
     }
 }
