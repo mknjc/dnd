@@ -12,54 +12,54 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.SplitPane?>
 
-<?import javafx.scene.control.cell.TextFieldTableCell?>
-
-<?import javafx.util.converter.IntegerStringConverter?>
-<GridPane hgap="5.0" prefHeight="700.0" prefWidth="1000.0" vgap="5.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.mknjc.apps.dnd.FightController" stylesheets="@style.css">
-   <columnConstraints>
-      <ColumnConstraints fillWidth="false" hgrow="NEVER" minWidth="10.0" />
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-      <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints fillHeight="false" vgrow="NEVER" />
-      <RowConstraints vgrow="ALWAYS" />
-   </rowConstraints>
-   <children>
-      <Label text="Kampfrunde: " />
-      <Button fx:id="addFighterButton" onAction="#addFighterClicked" text="Neuer Kämpfer" GridPane.columnIndex="2" />
-      <Label fx:id="roundLabel" text="0" GridPane.columnIndex="1" />
-      <SplitPane fx:id="tablePlane" orientation="VERTICAL" GridPane.columnSpan="3" GridPane.fillWidth="true" GridPane.rowIndex="1">
-           <TableView fx:id="actionsTable" editable="true">
-               <columns>
-                   <TableColumn text="source" fx:id="actionsSourceColumn" prefWidth="400">
-                       <cellValueFactory>
-                           <PropertyValueFactory property="source" />
-                       </cellValueFactory>
-                   </TableColumn>
-                   <TableColumn text="target" fx:id="actionsTargetColumn" prefWidth="400">
-                       <cellValueFactory>
-                           <PropertyValueFactory property="target" />
-                       </cellValueFactory>
-                   </TableColumn>
-                   <TableColumn text="damage" fx:id="actionsDamageColumn">
-                       <cellValueFactory>
-                           <PropertyValueFactory property="damage" />
-                       </cellValueFactory>
-                   </TableColumn>
-                   <TableColumn text="action" fx:id="actionsActionColumn" prefWidth="400">
-                       <cellValueFactory>
-                           <PropertyValueFactory property="action" />
-                       </cellValueFactory>
-                   </TableColumn>
-               </columns>
-           </TableView>
-       </SplitPane>
-      <Button fx:id="nextRoundButton" onAction="#nextRoundPressed" text="Nächste Runde" GridPane.rowIndex="3" />
-      <Button fx:id="startFightButton" onAction="#startFightPressed" text="Kampf starten" GridPane.rowIndex="3" GridPane.columnIndex="1" />
-      <Button fx:id="addActionButton" onAction="#addActionPressed" text="Neue Aktion" GridPane.rowIndex="3" GridPane.columnIndex="2" />
-   </children>
-   <padding>
-      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-   </padding>
+<GridPane hgap="5.0" prefHeight="700.0" prefWidth="1000.0" vgap="5.0" xmlns="http://javafx.com/javafx/22"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.mknjc.apps.dnd.FightController"
+          stylesheets="@style.css">
+    <columnConstraints>
+        <ColumnConstraints fillWidth="false" hgrow="NEVER" minWidth="10.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints fillHeight="false" vgrow="NEVER"/>
+        <RowConstraints vgrow="ALWAYS"/>
+    </rowConstraints>
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+    </padding>
+    <Label text="Kampfrunde: "/>
+    <Button fx:id="addFighterButton" onAction="#addFighterClicked" text="Neuer Kämpfer" GridPane.columnIndex="2"/>
+    <Label fx:id="roundLabel" text="0" GridPane.columnIndex="1"/>
+    <SplitPane fx:id="tablePlane" orientation="VERTICAL" GridPane.columnSpan="3" GridPane.fillWidth="true"
+               GridPane.rowIndex="1">
+        <TableView fx:id="actionsTable" editable="true">
+            <columns>
+                <TableColumn text="source" fx:id="actionsSourceColumn" prefWidth="400">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="source"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="target" fx:id="actionsTargetColumn" prefWidth="400">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="target"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="damage" fx:id="actionsDamageColumn">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="damage"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="action" fx:id="actionsActionColumn" prefWidth="400">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="action"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </SplitPane>
+    <Button fx:id="nextRoundButton" onAction="#nextRoundPressed" text="Nächste Runde" GridPane.rowIndex="3"/>
+    <Button fx:id="startFightButton" onAction="#startFightPressed" text="Kampf starten" GridPane.rowIndex="3"
+            GridPane.columnIndex="1"/>
+    <Button fx:id="addActionButton" onAction="#addActionPressed" text="Neue Aktion" GridPane.rowIndex="3"
+            GridPane.columnIndex="2"/>
 </GridPane>
