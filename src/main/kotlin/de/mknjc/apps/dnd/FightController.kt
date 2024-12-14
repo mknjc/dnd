@@ -196,8 +196,7 @@ class FightController : Initializable {
         if (nextFighters.isEmpty()) {
             nextIni = fightersTable.items
                 .filter { fighter -> fighter.isParticipatingInFight() }
-                .map { fighter -> fighter.initiative }
-                .max()
+                .maxOfOrNull { fighter -> fighter.initiative } ?: 0
             fightersTable.items
                 .filter { fighter -> fighter.isParticipatingInFight() }
                 .filter { fighter -> fighter.initiative == nextIni }

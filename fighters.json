@@ -1,0 +1,65 @@
+[
+  {
+    "type": "PARTY",
+    "idx": 0,
+    "initiative": 0,
+    "name": "Friedrich",
+    "hp": 34,
+    "maxHp": 44,
+    "mods": ""
+  },
+    {
+        "type": "PARTY",
+        "idx": 1,
+        "initiative": 0,
+        "name": "Lia",
+        "hp": 13,
+        "maxHp": 31,
+        "mods": ""
+    },
+    {
+        "type": "PARTY",
+        "idx": 2,
+        "initiative": 0,
+        "name": "Rose",
+        "hp": 43,
+        "maxHp": 50,
+        "mods": ""
+    },
+    {
+        "type": "PARTY",
+        "idx": 3,
+        "initiative": 0,
+        "name": "Tungdil",
+        "hp": 22,
+        "maxHp": 52,
+        "mods": ""
+    },
+    {
+        "type": "PARTY",
+        "idx": 4,
+        "initiative": 0,
+        "name": "Tahatan",
+        "hp": 8,
+        "maxHp": 33,
+        "mods": ""
+    },
+    {
+        "type": "PARTY",
+        "idx": 5,
+        "initiative": 0,
+        "name": "Thar'roc",
+        "hp": 20,
+        "maxHp": 76,
+        "mods": ""
+    },
+    {
+        "type": "PARTY",
+        "idx": 6,
+        "initiative": 0,
+        "name": "Meru",
+        "hp": 25,
+        "maxHp": 40,
+        "mods": ""
+    }
+]
