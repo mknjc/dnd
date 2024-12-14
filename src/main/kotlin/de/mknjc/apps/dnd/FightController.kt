@@ -238,7 +238,12 @@ class FightController : Initializable {
 
     @FXML
     fun addActionPressed(event: ActionEvent) {
-        AddActionDialog(fightersTable.items.map { fighter -> fighter.name }).showAndWait().ifPresent { actions ->
+        val isSelectedComparator = comparingInt<Fighter> { Math.abs(it.initiative - currentIni) }
+
+        val fightersForSelection = fightersTable.items.sorted(isSelectedComparator.then(comparing(Fighter::name))).map(Fighter::name)
+        val isOnlyOneFighterSelected = fightersTable.activeFighters.size == 1
+
+        AddActionDialog(actionsTable.scene, fightersForSelection,isOnlyOneFighterSelected).showAndWait().ifPresent { actions ->
             actionsTable.items.addAll(actions)
         }
     }

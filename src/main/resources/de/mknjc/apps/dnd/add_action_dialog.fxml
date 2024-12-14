@@ -20,7 +20,9 @@
             <Label text="Target:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
             <CheckComboBox fx:id="targetSelector" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
             <Label text="Schaden:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-            <TextField fx:id="damageField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <TextField fx:id="damageField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Aktion:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="actionDescriptionField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
         </GridPane>
     </content>
 

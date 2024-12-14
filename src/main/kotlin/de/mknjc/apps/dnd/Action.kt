@@ -3,7 +3,6 @@ package de.mknjc.apps.dnd
 import de.mknjc.apps.hqpdown.ui.helper.IntegerPropertyDelegate
 import de.mknjc.apps.hqpdown.ui.helper.StringPropertyDelegate
 import javafx.beans.property.IntegerProperty
-import javafx.beans.property.Property
 import javafx.beans.property.SimpleIntegerProperty
 import javafx.beans.property.SimpleStringProperty
 import javafx.beans.property.StringProperty
@@ -21,12 +20,12 @@ class Action {
     fun damageProperty() : IntegerProperty = damageProperty
     var damage by IntegerPropertyDelegate(damageProperty)
 
-    val actionProperty = SimpleStringProperty(this, "action", "")
-    fun actionProperty() : StringProperty = actionProperty
-    var action by StringPropertyDelegate(actionProperty)
+    val actionDescriptionProperty = SimpleStringProperty(this, "action", "")
+    fun actionDescriptionProperty() : StringProperty = actionDescriptionProperty
+    var actionDescription by StringPropertyDelegate(actionDescriptionProperty)
 
 
     override fun toString(): String {
-        return "Action(source=$source, target=$target, damage=$damage, action=$action)"
+        return "Action(source=$source, target=$target, damage=$damage, action=$actionDescription)"
     }
 }
