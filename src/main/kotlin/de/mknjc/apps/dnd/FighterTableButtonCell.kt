@@ -1,6 +1,6 @@
 package de.mknjc.apps.dnd
 
-import de.mknjc.apps.dnd.helper.EditableTableCell
+import de.mknjc.apps.dnd.model.FighterType
 import javafx.beans.value.ObservableBooleanValue
 import javafx.scene.control.Button
 import javafx.scene.control.TableCell
@@ -8,14 +8,7 @@ import javafx.scene.control.TableColumn
 import javafx.scene.control.Tooltip
 import javafx.scene.text.Text
 import javafx.util.Callback
-import org.controlsfx.glyphfont.FontAwesome
-import org.controlsfx.glyphfont.Glyph
 import org.kordamp.ikonli.javafx.FontIcon
-import org.kordamp.ikonli.material2.Material2AL
-import org.kordamp.ikonli.material2.Material2MZ
-import org.kordamp.ikonli.materialdesign2.MaterialDesignE
-import org.kordamp.ikonli.materialdesign2.MaterialDesignG
-import org.kordamp.ikonli.materialdesign2.MaterialDesignS
 
 fun <S> fighterTableButtonCellForColumn(editable: ObservableBooleanValue): Callback<TableColumn<S, Fighter>, TableCell<S, Fighter>> {
     return Callback { FighterTableButtonCell<S>(editable) }

@@ -1,5 +1,6 @@
 package de.mknjc.apps.dnd
 
+import de.mknjc.apps.dnd.model.FighterType
 import java.nio.file.Files
 import java.nio.file.Path
 

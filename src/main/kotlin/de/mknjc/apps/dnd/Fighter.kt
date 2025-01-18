@@ -1,5 +1,6 @@
 package de.mknjc.apps.dnd
 
+import de.mknjc.apps.dnd.model.FighterType
 import de.mknjc.apps.hqpdown.ui.helper.IntegerPropertyDelegate
 import de.mknjc.apps.hqpdown.ui.helper.ObjectPropertyDelegate
 import de.mknjc.apps.hqpdown.ui.helper.StringPropertyDelegate
@@ -9,13 +10,6 @@ import javafx.beans.property.SimpleIntegerProperty
 import javafx.beans.property.SimpleObjectProperty
 import javafx.beans.property.SimpleStringProperty
 import javafx.beans.property.StringProperty
-
-enum class FighterType {
-    PARTY,
-    DISABLED_PARTY,
-    FRIEND,
-    ENEMY
-}
 
 class Fighter() {
     val typeProperty = SimpleObjectProperty(this, "type", FighterType.ENEMY)

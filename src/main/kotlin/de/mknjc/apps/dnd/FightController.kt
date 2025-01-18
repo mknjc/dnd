@@ -1,25 +1,19 @@
 package de.mknjc.apps.dnd
 
-import javafx.application.Platform
+import de.mknjc.apps.dnd.model.FighterType
 import javafx.beans.binding.When
 import javafx.beans.property.SimpleBooleanProperty
 import javafx.event.ActionEvent
-import javafx.event.EventHandler
 import javafx.fxml.FXML
 import javafx.fxml.Initializable
-import javafx.scene.control.Button
-import javafx.scene.control.Label
-import javafx.scene.control.SplitPane
-import javafx.scene.control.TableColumn
-import javafx.scene.control.TableRow
-import javafx.scene.control.TableView
-import javafx.scene.control.TextField
+import javafx.scene.control.*
 import javafx.scene.control.cell.TextFieldTableCell
 import javafx.util.Callback
 import javafx.util.converter.IntegerStringConverter
-import org.controlsfx.control.textfield.TextFields
 import java.net.URL
-import java.util.ResourceBundle
+import java.util.*
+import java.util.Comparator.comparing
+import java.util.Comparator.comparingInt
 
 class FightController : Initializable {
 
