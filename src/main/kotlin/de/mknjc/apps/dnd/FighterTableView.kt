@@ -95,4 +95,11 @@ class FighterTableView : TableView<Fighter>() {
         }
         return row
     }
+
+    public fun scrollToActiveFighter() {
+        val idx = items.indexOfFirst { activeFighters.contains(it) }
+        if (idx >= 0) {
+            scrollTo(idx)
+        }
+    }
 }

@@ -207,6 +207,7 @@ class FightController : Initializable {
         fightersTable.activeFighters.clear()
         fightersTable.activeFighters.addAll(nextFighters)
 
+        fightersTable.scrollToActiveFighter()
     }
 
     private fun applyActions() {
@@ -240,6 +241,7 @@ class FightController : Initializable {
 
         AddActionDialog(actionsTable.scene, fightersForSelection,isOnlyOneFighterSelected).showAndWait().ifPresent { actions ->
             actionsTable.items.addAll(actions)
+            actionsTable.scrollTo(actionsTable.items.size - 1)
         }
     }
 
