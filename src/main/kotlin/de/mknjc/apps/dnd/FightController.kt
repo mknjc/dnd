@@ -47,7 +47,7 @@ class FightController : Initializable {
     private lateinit var actionsDamageColumn: TableColumn<Action, Int>
 
     @FXML
-    private lateinit var actionsActionColumn: TableColumn<Action, String>
+    private lateinit var actionsDescriptionColumn: TableColumn<Action, String>
 
     private val appliedActions = mutableListOf<Action>()
 
@@ -88,7 +88,7 @@ class FightController : Initializable {
         actionsSourceColumn.cellFactory = TextFieldTableCell.forTableColumn()
         actionsTargetColumn.cellFactory = TextFieldTableCell.forTableColumn()
         actionsDamageColumn.cellFactory = TextFieldTableCell.forTableColumn(IntegerStringConverter())
-        actionsActionColumn.cellFactory = TextFieldTableCell.forTableColumn()
+        actionsDescriptionColumn.cellFactory = TextFieldTableCell.forTableColumn()
 //
 //        actionsTable.onMouseClicked = EventHandler<MouseEvent> { event ->
 //            val pick = event.pickResult
@@ -109,6 +109,8 @@ class FightController : Initializable {
 //        }
 
         actionsTable.rowFactory = Callback { actionTableRowFactory() }
+
+
     }
 
     private fun actionTableRowFactory(): TableRow<Action> {

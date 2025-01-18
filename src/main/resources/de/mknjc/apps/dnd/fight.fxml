@@ -18,7 +18,7 @@
     <columnConstraints>
         <ColumnConstraints fillWidth="false" hgrow="NEVER" minWidth="10.0"/>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
-        <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="10.0" halignment="RIGHT" />
     </columnConstraints>
     <rowConstraints>
         <RowConstraints fillHeight="false" vgrow="NEVER"/>
@@ -28,8 +28,10 @@
         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
     </padding>
     <Label text="Kampfrunde: "/>
-    <Button fx:id="addFighterButton" onAction="#addFighterClicked" text="Neuer Kämpfer" GridPane.columnIndex="2"/>
     <Label fx:id="roundLabel" text="0" GridPane.columnIndex="1"/>
+
+    <Button fx:id="addFighterButton" onAction="#addFighterClicked" text="Neuer Kämpfer" GridPane.columnIndex="2"/>
+
     <SplitPane fx:id="tablePlane" orientation="VERTICAL" GridPane.columnSpan="3" GridPane.fillWidth="true"
                GridPane.rowIndex="1">
         <TableView fx:id="actionsTable" editable="true">
@@ -49,17 +51,17 @@
                         <PropertyValueFactory property="damage"/>
                     </cellValueFactory>
                 </TableColumn>
-                <TableColumn text="action" fx:id="actionsActionColumn" prefWidth="400">
+                <TableColumn text="action" fx:id="actionsDescriptionColumn" prefWidth="400">
                     <cellValueFactory>
-                        <PropertyValueFactory property="action"/>
+                        <PropertyValueFactory property="actionDescription"/>
                     </cellValueFactory>
                 </TableColumn>
             </columns>
         </TableView>
     </SplitPane>
-    <Button fx:id="nextRoundButton" onAction="#nextRoundPressed" text="Nächste Runde" GridPane.rowIndex="3"/>
-    <Button fx:id="startFightButton" onAction="#startFightPressed" text="Kampf starten" GridPane.rowIndex="3"
-            GridPane.columnIndex="1"/>
-    <Button fx:id="addActionButton" onAction="#addActionPressed" text="Neue Aktion" GridPane.rowIndex="3"
-            GridPane.columnIndex="2"/>
+    <Button fx:id="nextRoundButton" onAction="#nextRoundPressed" text="_Nächste Runde" GridPane.rowIndex="3" />
+    <Button fx:id="startFightButton" onAction="#startFightPressed" text="_Kampf starten" GridPane.rowIndex="3"
+            GridPane.columnIndex="1" />
+    <Button fx:id="addActionButton" onAction="#addActionPressed" text="Neue _Aktion" GridPane.rowIndex="3"
+            GridPane.columnIndex="2"  />
 </GridPane>
